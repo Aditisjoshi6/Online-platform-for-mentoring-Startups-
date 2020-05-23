@@ -11,30 +11,30 @@ export class AdminMentorsComponent implements OnInit {
 
   people = [
     {
-      id: 1,
-      name: 'John',
-      email: 'John@gmail.com',
+      id: 101,
+      name: 'Aditi Joshi',
+      email: 'aditi@gmail.com',
       //dob: '7/2/2010',
      // age:22
     },
     {
-      id: 2,
-      name: 'Sarah',
-      email: 'sarah@gmail.com',
+      id: 102,
+      name: 'Sneha Odugoudar',
+      email: 'sneha@gmail.com',
       //dob: '4/3/1987',
      // age:40
     },
     {
-      id: 3,
-      name: 'Lindsay',
-      email: 'lindsay@gmail.com',
+      id: 103,
+      name: 'Apoorva Karadi',
+      email: 'apoorva@gmail.com',
       //dob: '3/3/1988',
      // age:50
     },
     {
-      id: 4,
-      name: 'Megan',
-      email: 'megan@gmail.com',
+      id: 104,
+      name: 'Jahnavi Desai',
+      email: 'jahnavi@gmail.com',
       //dob: '8/4/1876',
      // age:80
     }

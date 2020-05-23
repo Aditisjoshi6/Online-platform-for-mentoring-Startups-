@@ -13,29 +13,29 @@ export class AdminUsersComponent implements OnInit {
   people = [
     {
       id: 1,
-      name: 'John',
-      email: 'John@gmail.com',
+      name: 'Abhinav Joshi',
+      email: 'abhi@gmail.com',
       //dob: '7/2/2010',
      // age:22
     },
     {
       id: 2,
-      name: 'Sarah',
-      email: 'sarah@gmail.com',
+      name: 'Shlok P',
+      email: 'shlok@gmail.com',
       //dob: '4/3/1987',
      // age:40
     },
     {
       id: 3,
-      name: 'Lindsay',
-      email: 'lindsay@gmail.com',
+      name: 'Shreya J',
+      email: 'shreya@gmail.com',
       //dob: '3/3/1988',
      // age:50
     },
     {
       id: 4,
-      name: 'Megan',
-      email: 'megan@gmail.com',
+      name: 'Adhya D',
+      email: 'adhya@gmail.com',
       //dob: '8/4/1876',
      // age:80
     }
