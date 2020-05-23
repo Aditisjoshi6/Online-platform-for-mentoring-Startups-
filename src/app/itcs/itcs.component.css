@@ -1,0 +1,13 @@
+.main-content{
+    margin-left:250px;
+}
+
+th{
+    background-color: cornflowerblue;
+    color: white;
+    font-size:0.80rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    font-weight: bold;
+}    
+

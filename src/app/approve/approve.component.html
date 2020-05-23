@@ -1,0 +1,173 @@
+<app-sidebar></app-sidebar>
+<!-- Main content -->
+<div class="main-content" id="panel">
+  <!-- Topnav -->
+
+  <nav class="navbar navbar-top navbar-expand navbar-light bg-secondary border-bottom fixed-top">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Search form -->
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <!-- <form class="navbar-search navbar-search-dark form-inline mr-sm-3" id="navbar-search-main">
+          <div class="form-group mb-0">
+            <div class="input-group input-group-alternative input-group-merge">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fas fa-search"></i></span> 
+              
+              </div>
+              <input class="form-control" placeholder="Search" type="text"> 
+            </div>
+          </div>
+        <button type="button" class="close" data-action="search-close" data-target="#navbar-search-main"
+            aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+        </form> -->
+        <div style="font-size:20px;color: orange;font-weight: bold;">Startup Ventures - Admin Panel</div>
+        <!-- Navbar links -->
+        <!-- <ul class="navbar-nav align-items-center ml-md-auto">
+          <li class="nav-item d-xl-none">
+             Sidenav toggler
+            <div class="pr-3 sidenav-toggler sidenav-toggler-light" data-action="sidenav-pin"
+              data-target="#sidenav-main">
+              <div class="sidenav-toggler-inner">
+                <i class="sidenav-toggler-line"></i>
+                <i class="sidenav-toggler-line"></i>
+                <i class="sidenav-toggler-line"></i>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown">
+
+            <i class="ni ni-bell-55"></i>
+
+            <div class="dropdown-menu dropdown-menu-xl dropdown-menu-right py-0 overflow-hidden">
+
+            </div>
+          </li>
+
+        </ul> -->
+        <!-- <ul class="navbar-nav align-items-center ml-auto ml-md-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link pr-0" routerLink="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              <div class="media align-items-center"><i class="fas fa-user-circle"></i>
+
+                <div class="media-body ml-2 d-none d-lg-block">
+                  <span class="mb-0 text-sm  font-weight-bold">Admin</span>
+                </div>
+              </div>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <div class="dropdown-header noti-title">
+                <h6 class="text-overflow m-0">Welcome Admin</h6>
+              </div>
+              <a routerLink="#!" class="dropdown-item">
+                <i class="ni ni-single-02"></i>
+                <span>My profile</span>
+              </a>
+
+              <div class="dropdown-divider"></div>
+              <a routerLink="#!" class="dropdown-item">
+                <i class="ni ni-user-run"></i>
+                <span>Logout</span>
+              </a>
+            </div>
+          </li>
+        </ul> -->
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <!-- Header -->
+  <!-- <div class="header pb-6">
+    <div class="container-fluid">
+      <div class="header-body">
+        <div class="row align-items-center py-4">
+          <div class="col-lg-6 col-7">
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div> --><br><br><br><br><br>
+  <h1> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; Mentors to be approved</h1>
+  <br><br>
+  <div class="container-fluid mt--9">
+    <div class="row">
+      <div class="col-sm-10" style="min-height:667px;margin-left:250px;"><br><br><br><br><br>
+        <div class="card">
+          <table mat-table [dataSource]="dataSource">
+            <ng-container matColumnDef="id">
+              <th class="header" mat-header-cell *matHeaderCellDef>
+                <br>ID
+                <br>
+                <mat-form-field class="filter" floatLabel="never">
+                  <mat-label class="a">Search</mat-label>
+                  <input matInput [formControl]="idFilter">
+                </mat-form-field>
+              </th>
+              <td mat-cell *matCellDef="let person">{{person.id}}</td>
+            </ng-container>
+            <ng-container matColumnDef="name">
+              <th class="header" mat-header-cell *matHeaderCellDef>
+                <br>Name
+                <br>
+                <mat-form-field class="filter" floatLabel="never">
+                  <mat-label class="a">Search</mat-label>
+                  <input matInput [formControl]="nameFilter">
+                </mat-form-field>
+              </th>
+              <td mat-cell *matCellDef="let person">{{person.name}}</td>
+            </ng-container>
+            <ng-container matColumnDef="email">
+              <th class="header" mat-header-cell *matHeaderCellDef>
+                <br>Email
+                <br>
+                <mat-form-field class="filter" floatLabel="never">
+                  <mat-label class="a">Search</mat-label>
+                  <input matInput [formControl]="emailFilter">
+                </mat-form-field>
+              </th>
+              <td mat-cell *matCellDef="let person">{{person.email}}</td>
+            </ng-container>
+            <ng-container matColumnDef="action">
+                <th class="header" mat-header-cell *matHeaderCellDef>
+                    <div style="margin-top: -26px;"> Approve</div>
+                </th>
+                <td mat-cell *matCellDef="let person">
+                    <button type="button" style="border-radius:100%" 
+                        class="btn btn-outline-info waves-effect waves-light m-1">
+                         View Profile
+                    </button>
+                    &nbsp;
+                    <button type="button" style="border-radius:100%" 
+                        class="btn btn-outline-info waves-effect waves-light m-1">
+                         Approve
+                    </button>
+                    &nbsp;
+
+                    <!-- <button type="button" style="border-radius:100%"
+                        class="btn btn-outline-success waves-effect waves-light m-1">
+                        <i class="fas fa-pen-square"></i>
+                    </button>
+
+                    &nbsp;
+
+                    <button type="button" style="border-radius:100%"
+                        class="btn btn-outline-danger waves-effect waves-light m-1">
+                        <i class="fa fa-trash"></i>
+                    </button> -->
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+            <tr mat-row *matRowDef="let person; columns: columnsToDisplay"></tr>
+          </table>
+        </div>
+      </div>
+    </div>

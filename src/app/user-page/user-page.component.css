@@ -1,0 +1,21 @@
+.main-content{
+    margin-left:250px;
+}
+
+table {
+    width:100%;
+  }
+
+.header{
+    
+    background-color: cornflowerblue;
+    color: white;
+    font-size:0.80rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    font-weight: bold;
+}
+
+.a{
+    color:#D3D3D3;
+}

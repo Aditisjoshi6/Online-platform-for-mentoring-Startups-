@@ -1,0 +1,129 @@
+<!-- Favicon -->
+<link rel="icon" href="../assets/img/brand/favicon.png" type="image/png">
+<!-- Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+<!-- Icons -->
+<link rel="stylesheet" href="../assets/css/nucleo.css" type="text/css">
+<link rel="stylesheet" href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
+<!-- Argon CSS -->
+<link rel="stylesheet" href="../assets/css/argon.min9f1e.css?v=1.1.0" type="text/css">
+
+<!-- Main content -->
+<div class="main-content">
+  <!-- Header -->
+  <div class="header bg-gradient-primary py-3">
+    <div class="container">
+      <div class="header-body text-center mb-7">
+        <div class="row justify-content-center">
+          <div class="col-xl-5 col-lg-6 col-md-8 px-5">
+            <h1 class="text-white">Create an account</h1>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="separator separator-bottom separator-skew zindex-100">
+      <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1"
+        xmlns="http://www.w3.org/2000/svg">
+        <polygon class="fill-default" points="2560 0 2560 100 0 100"></polygon>
+      </svg>
+    </div>
+  </div>
+  <!-- Page content -->
+  <div class="container mt--8 pb-5">
+    <!-- Table -->
+    <div class="row justify-content-center">
+      <div class="col-lg-6 col-md-8">
+        <div class="card bg-secondary border-0">
+          <div class="card-header bg-transparent pb-2">
+            <div class="text-muted text-center mt-2 mb-4"><small>Sign up with</small></div>
+            <div class="text-center">
+              <a href="https://github.com" class="btn btn-neutral btn-icon mr-4">
+                <span class="btn-inner--icon"><img src="../../assets/img/icons/common/github.svg"></span>
+                <span class="btn-inner--text">Github</span>
+              </a>
+              <a href="https://www.google.com/gmail" class="btn btn-neutral btn-icon">
+                <span class="btn-inner--icon"><img src="../../assets/img/icons/common/google.svg"></span>
+                <span class="btn-inner--text">Google</span>
+              </a>
+            </div>
+          </div>
+          <div class="card-body px-lg-6 py-lg-4">
+            <div class="text-center text-muted mb-4">
+              <small>Or sign up with credentials</small>
+            </div>
+            <form [formGroup]="form" (ngSubmit)="onSubmit()">
+              <div class="form-group">
+                <div class="input-group mb-2">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                  </div>
+                  <select class="form-control" formControlName="role" [ngClass]="{'is-invalid':
+                    form.get('role').touched && form.get('role').invalid}" >
+                    <option value="">Select Your Role</option>
+                    <option value="mentor">Mentor</option>
+                    <option value="user">User</option>
+                 </select>
+                  <div class="invalid-feedback">
+                    <div>Role is Required</div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group mb-2">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                  </div>
+                  <input class="form-control" placeholder="Name" type="text" formControlName="name" [ngClass]="{'is-invalid':
+                    form.get('name').touched && form.get('name').invalid}" />
+                  <div class="invalid-feedback">
+                    <div>Name is Required</div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group mb-2">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                  </div>
+                  <input class="form-control" placeholder="Email" type="email" formControlName="email" [ngClass]="{'is-invalid':
+                  form.get('email').touched && form.get('email').invalid}" />
+                  <div *ngIf="form.get('email').touched && form.get('email').invalid" class="invalid-feedback">
+                    <div *ngIf="form.get('email').errors.required">Email is Required</div>
+                    <div *ngIf="form.get('email').errors.email">Email must be valid email address</div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group mb-2">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                  </div>
+                  <input class="form-control" placeholder="Password" type="password" formControlName="password" [ngClass]="{'is-invalid':
+                  form.get('password').touched && form.get('password').invalid}" />
+                <div *ngIf="form.get('password').touched && form.get('password').invalid" class="invalid-feedback">
+                  <div *ngIf="form.get('password').errors.required">Password is Required</div>
+                  <div *ngIf="form.get('password').errors.minlength">Password should be 6 characters long</div>
+                </div>
+                </div>
+              </div>
+              <div class="row my-4">
+                <div class="col-12">
+                  <div class="custom-control custom-control-alternative custom-checkbox">
+                    <input class="custom-control-input" id="customCheckRegister" type="checkbox">
+                    <label class="custom-control-label" for="customCheckRegister">
+                      <span class="text-muted">I agree with the <a href="#!">Privacy Policy</a></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary mt-4" [disabled]='!form.valid'>Create account</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
